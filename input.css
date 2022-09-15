@@ -21,6 +21,11 @@
   background: #923D41;
 }
 
+/*Background color:  hover*/
+.bg-accent:hover{
+  background: #803639;
+}
+
 /*Border Color*/
 .border-accent{
   border: 1px solid #923D41;
@@ -114,9 +119,4 @@
 
 .sp2{
   width: calc(100% - 990px);
-}
-
-/*flip icon*/
-.flip{
-  transform: scaleX(-1);
 }

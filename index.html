@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link type="text/css" rel="stylesheet" href="./boxicons/css/boxicons.min.css">
-	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" type="text/css" href="./css.bootstrap.min.css">
 	<title>Experiential Transcript - Home</title>
 </head>
 <body>
@@ -47,18 +47,20 @@
 			</div>
 			<div class="px-8 py-8">
 				<div class="relative">
-					<div class="absolute -top-24 w-32 h-32">
+					<div class="absolute -top-24 w-32 h-32 ">
 						<img class="rounded-full border-2 border-gray-100" src="./images/cover/profile-bg.png">
-						<a href="" id="show-modal-picture"><i class='bx bxs-camera-plus text-xl absolute right-0 bottom-0 bg-gray-100 p-2 rounded-full text-accent'></i></a>
+						<a href="" id="show-modal-picture"><i class='bx bxs-camera-plus text-xl absolute right-0 bottom-0 bg-gray-100 p-2 rounded-full text-accent hover:scale-125 ease-in-out duration-200'></i></a>
 					</div>					
 				</div>
-				<div class="mt-16 sm:mt-0 sm:ml-44">
-					<div class=" space-x-3">
-						<a href="" id="show-modal-profile"><i class='bx bxs-edit text-3xl origin-center text-accent flip' ></i></a>
-						<div class="flex flex-col space-y-3 text-xs md:mt-3">
-							<div class="flex relative w-fit">
-								<h4 class="text-gray-700 font-semibold text-xl">Percy Brown</h4>
-								<h4 class="absolute -top-2 -right-5 text-gray-500 font-semibold text-sm">'22</h4>
+				<div class="mt-16 sm:mt-0 sm:ml-44 ">
+					<div class="space-x-3">
+						<div class="flex flex-col space-y-3 text-xs ">
+							<div class="flex justify-between">
+								<div class="relative w-fit">
+									<h4 class="absolute -top-2 -right-5 text-gray-500 font-semibold text-sm">'22</h4>
+									<h4 class="text-gray-700 font-semibold text-xl">Percy Brown</h4>
+								</div>
+								<a href="" id="show-modal-profile"><i class='bx bxs-edit text-3xl origin-center text-accent hover:scale-125 ease-in-out duration-200'></i></a>
 							</div>
 							<h4 class="text-gray-400 text-sm">Gender: <span class="text-gray-700">Male</span></h4>
 							<h4 class="text-gray-400 text-sm">Department: <span class="text-gray-700">Computer Science & Information Systems</span></h4>
@@ -93,11 +95,11 @@
 						</div>
 					</div>
 				</div>
-			<hr class="my-8">
+			<hr class="my-9">
 			</div>
 		</div>
 	</section>
-	<section id="main-section" class="mt-96 sm:mt-72 md:mt-52">
+	<section id="main-section" class="mt-96 sm:mt-64 md:mt-40">
 		<div class="max-w-screen-xl mx-auto">
 			<div class="px-8 py-2 space-y-12">
 				<div class="flex flex-col space-y-6">
@@ -116,21 +118,21 @@
 				</div>
 				<div class="flex flex-col space-y-10 pb-20">
 					<button class="bg-accent px-3 py-3 text-white rounded-md flex items-center justify-center md:w-72"><i class='bx bx-cog mr-1'></i>Manage Experiential Transcript</button>
-					<button class="border-accent px-5 py-3 text-accent rounded-md flex items-center justify-center md:w-32"><i class='bx bx-card mr-1 text-lg'></i>Metric</button>
+					<button class="px-3 py-3 text-gray-500 bg-white hover:bg-gray-200 rounded-lg bg-gray-100 border border-gray-200 flex items-center justify-center md:w-72"><i class='bx bx-cog mr-1'></i>Kindly Update Profile</button>
+					<button type="button" class="flex items-center justify-center text-gray-500 bg-white hover:bg-gray-100 rounded-lg border border-gray-200 text-sm font-medium px-5 py-3 hover:text-gray-900 focus:z-10 md:w-32"><i class='bx bx-card mr-1 text-lg'></i>Metric</button>
 					<a href="" class="hover:scale-125 ease-in-out duration-200 w-fit">Sample Transcript<i class='space-x-8 bx bx-link-external text-accent text-xl '></i></a>
 					<a href="" class="hover:scale-125 ease-in-out duration-200 w-fit">Tutorial<i class='space-x-8 bx bx-link-external text-accent text-xl '></i></a>
 				</div>
 			</div>
-
-			
 		</div>
 	</section>
 
-	<!-- Modal Edit Profile-->
-	<div id="modal-profile" class="z-50 fixed hidden overflow-y-auto inset-0 bg-black bg-opacity-30 h-screen w-full flex justify-center items-center md:items-center py-10 xl:overflow-y-hidden">
-		<div class="relative w-10/12 xl:max-w-4xl bg-white rounded shadow-lg">
-			<!-- Modal Header -->
-			<div class="flex justify-between items-start py-4 px-10 rounded-t border-b bg-gray-200">
+
+
+	<div id="modal-profile" class="z-50 fixed hidden overflow-y-auto inset-0 bg-black bg-opacity-30 h-screen w-full flex justify-center items-start md:items-center pt-10 xl:overflow-y-hidden">
+		<div class="relative w-10/12 md:max-w-6xl xl:max-w-5xl bg-white rounded shadow-lg">
+			
+			<div class="flex justify-between items-start py-4 px-10 rounded-t border-b">
                 <h3 class="text-xl font-normal text-gray-900">
                     Update Content
                 </h3>
@@ -140,8 +142,8 @@
                 </button>
             </div>
 
-			<!-- Modal Body -->
-            <div class="py-4 px-10">
+		
+            <div class="py-4 px-10 ">
             	<div class="flex flex-col md:flex-row md:justify-between">
             		<h4 class="text-sm font-semibold text-gray-500 text-lg">Profile</h4>
             		<div class="mt-4 px-4 space-y-10">
@@ -154,19 +156,17 @@
 					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Last name<span class="text-accent">*</span></label>
 					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
 					        </div>
-            			</div>
-            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
-	            			<div>
+					        <div>
 					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Gender<span class="text-accent">*</span></label>
 					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
 					        </div>
+            			</div>
+            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
 					        <div>
 					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Phone<span class="text-accent">*</span></label>
 					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
 					        </div>
-            			</div>
-            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
-	            			<div>
+					        <div>
 					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Student ID<span class="text-accent">*</span></label>
 					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
 					        </div>
@@ -174,6 +174,9 @@
 					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Years<span class="text-accent">*</span></label>
 					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
 					        </div>
+            			</div>
+            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
+	            	
             			</div>
             		</div>	
             	</div>
@@ -190,9 +193,7 @@
 					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Major<span class="text-accent">*</span></label>
 					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
 					        </div>
-            			</div>
-            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
-	            			<div>
+					        <div>
 					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Degree<span class="text-accent">*</span></label>
 					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
 					        </div>
@@ -200,19 +201,19 @@
             		</div>	
             	</div>
             </div>
-			<!-- Modal Bottom -->
-        	<div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 bg-gray-200">
-                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Update Profile</button>
+		    <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200">
+                <button type="button" class="text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Update Profile</button>
                 <button id="close-modal-profile" type="button" class="text-gray-500 bg-white hover:bg-gray-100 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Decline</button>
             </div>
 		</div>
 	</div>
 
-	<!-- Modal Edit Picture -->
-	<div id="modal-picture" class="z-50 fixed overflow-y-auto inset-0 bg-black bg-opacity-30 h-screen w-full flex justify-center items-center md:items-center py-10 xl:overflow-y-hidden">
+
+
+	<div id="modal-picture" class="z-50 hidden fixed overflow-y-auto inset-0 bg-black bg-opacity-30 h-screen w-full flex justify-center items-center md:items-center py-10 xl:overflow-y-hidden">
 		<div class="relative w-10/12 md:max-w-xl bg-white rounded shadow-lg">
 			
-			<div class="flex justify-between items-start py-4 px-10 rounded-t border-b bg-gray-200">
+			<div class="flex justify-between items-start py-4 px-10 rounded-t border-b">
 				<h3 class="text-xl font-normal text-gray-900">
 					Edit Profile Picture
 				</h3>
@@ -221,37 +222,38 @@
 					<span class="sr-only">Close modal</span>
 				</button>
 			</div>
-			
 	
-					<div class="py-14 px-16">
-						<div class="flex flex-col space-y-16 md:flex-row md:space-y-0 md:justify-between">
-							<div class="w-32 h-32 space-y-2">
-								<img class="rounded-full border-2 border-gray-100" src="./images/cover/profile-bg.png">
-								<h4 class="text-xs text-gray-400">Current Profile Picture</h4>
-							</div>
-					
-							<div class="space-y-3">
-								<h4 class="">Set Profile Photo</h4>
-								<form class="">
-									<input class="border-2 border-dashed border-red-800 rounded-lg w-44 h-44 md:w-full flex justify-center items-center" type="file" id="myFile" name="filename">
-								</form>
-							</div>
+			<div class="py-14 px-10">
+				<div class="flex flex-col space-y-16 md:flex-row md:space-y-0 md:justify-between">
+					<div class="w-32 h-32 space-y-2">
+						<img class="rounded-full border-2 border-gray-100" src="./images/cover/profile-bg.png">
+						<h4 class="text-xs text-gray-400 font-semibold">Current Profile Picture</h4>
+					</div>
+					<div class="hidden md:flex h-44 w-0.5 bg-gray-200"></div>
+					<div class="space-y-3">
+						<h4 class="text-base text-gray-400 font-medium">Set Profile Photo</h4>
+						<div class="">
+							<form class="border-2 border-dashed border-gray-800 rounded-lg md:w-full flex justify-center items-center py-10 px-4">
+								<input class="text-accent" type="file" id="myFile" name="filename">
+							</form>
+							
 						</div>
 					</div>
+				</div>
+			</div>
 
-		
-		
-			<div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 bg-gray-200">
-				<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Update Picture</button>
+			<div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200">
+				<button type="button" class="text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Update Picture</button>
 				<button id="close-modal-picture" type="button" class="text-gray-500 bg-white hover:bg-gray-100 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Decline</button>
 			</div>
 		</div>
 	</div>
 
 
-		<!-- script -->
+	<!-- script -->
 	<script type="text/javascript" src="./js/index.js"></script>
 	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript">
 		let modalProfile = document.getElementById('modal-profile');
 		let modalPicture = document.getElementById('modal-picture');
