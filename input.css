@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.text-accent-light{
+  color: #D9A5A8;
+}
+
+.bg-accent-light{
+  background: #BB5D62;
+}
+
+/*Main color*/
+.text-accent{
+  color: #923D41;
+}
+
+/*Background color*/
+.bg-accent{
+  background: #923D41;
+}
+
+/*Border Color*/
+.border-accent{
+  border: 1px solid #923D41;
+}
+
+.tracking-sm-wide{
+	letter-spacing: 10px;
+}
+
+@media screen and (min-width: 768px) {
+	.tracking-xs-wide{
+		letter-spacing: 30px;
+	}
+} 
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  width: 38px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+  outline: none;
+  border: 0;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  border-radius: 20px;
+  background: #6b7280;
+  transform: rotate(0);
+  transition: all 0.5s;
+  outline: none;
+  border: 0;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+/*Active Navigation*/
+.active{
+	color: #923D41;
+}
+
+.active::before{
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	left: 50%;
+	top: 25px;
+	bottom: 0;
+	background: #B13B49;
+	border-radius: 50%;
+	transition: all ease 0.8s;
+	z-index: -1;
+}
+
+/*space between elements*/
+.sp1{
+  width: calc(100% - 944px);
+}
+
+.sp2{
+  width: calc(100% - 990px);
+}
+
+/*flip icon*/
+.flip{
+  transform: scaleX(-1);
+}
