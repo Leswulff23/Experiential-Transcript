@@ -125,7 +125,7 @@
 
 
 	<div id="modal" class="z-50 fixed overflow-y-auto inset-0 bg-black bg-opacity-30 h-screen w-full flex justify-center items-start md:items-center py-10 xl:overflow-y-hidden">
-		<div class="relative w-10/12 xl:w-1/2 h-fit bg-white rounded shadow-lg">
+		<div class="relative w-10/12 xl:w-1/2  bg-white rounded shadow-lg">
 			<div class="flex justify-between items-start p-4 rounded-t border-b">
         	
                 <h3 class="text-xl font-normal text-gray-900">
@@ -200,71 +200,8 @@
                 <button id="close-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Decline</button>
             </div>
 		</div>
-		
 	</div>
 
-
-	<!-- Modal -->
-	<!-- <div id="modal" class=" overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
-		<div class="h-screen w-full p-4 fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50">
-	        <div class="relative w-full max-w-2xl bg-white rounded-lg shadow">
-	        	<div class="flex justify-between items-start p-4 rounded-t border-b">
-	        	
-	                <h3 class="text-xl font-normal text-gray-900">
-	                    Update Content
-	                </h3>
-	                <button id="sign-modal" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
-	                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-	                    <span class="sr-only">Close modal</span>
-	                </button>
-	            </div>
-	     
-	            <div class="py-4 px-10">
-	            	<div class="flex flex-col md:flex-row md:justify-between">
-	            		<h4 class="text-sm font-semibold text-gray-500 text-lg">Profile</h4>
-	            		<div class="mt-4 px-4 space-y-10">
-	            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
-		            			<div>
-						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">First name<span class="text-accent">*</span></label>
-						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" placeholder="John" required>
-						        </div>
-						        <div>
-						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Last name<span class="text-accent">*</span></label>
-						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" placeholder="John" required>
-						        </div>
-	            			</div>
-	            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
-		            			<div>
-						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Gender<span class="text-accent">*</span></label>
-						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" placeholder="John" required>
-						        </div>
-						        <div>
-						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Phone<span class="text-accent">*</span></label>
-						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" placeholder="John" required>
-						        </div>
-	            			</div>
-	            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
-		            			<div>
-						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Student ID<span class="text-accent">*</span></label>
-						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" placeholder="John" required>
-						        </div>
-						        <div>
-						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Years<span class="text-accent">*</span></label>
-						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" placeholder="John" required>
-						        </div>
-	            			</div>
-	            		</div>	
-	            	</div>
-	            	<hr class="my-9">
-	            </div>
-
-	            <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200">
-	                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">I accept</button>
-	                <button id="close-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Decline</button>
-	            </div>
-	        </div>
-		</div>
-	</div> -->
 
 
 
