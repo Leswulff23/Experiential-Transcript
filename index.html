@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link type="text/css" rel="stylesheet" href="./boxicons/css/boxicons.min.css">
-	<link rel="stylesheet" type="text/css" href="./css.bootstrap.min.css">
 	<title>Experiential Transcript - Home</title>
 </head>
 <body>
@@ -49,7 +48,7 @@
 				<div class="relative">
 					<div class="absolute -top-24 w-32 h-32 ">
 						<img class="rounded-full border-2 border-gray-100" src="./images/cover/profile-bg.png">
-						<a href="" id="show-modal-picture"><i class='bx bxs-camera-plus text-xl absolute right-0 bottom-0 bg-gray-100 p-2 rounded-full text-accent hover:scale-125 ease-in-out duration-200'></i></a>
+						<a href="" onclick="openModal('modal-picture')"><i class='bx bxs-camera-plus text-xl absolute right-0 bottom-0 bg-gray-100 p-2 rounded-full text-accent hover:scale-125 ease-in-out duration-200'></i></a>
 					</div>					
 				</div>
 				<div class="mt-16 sm:mt-0 sm:ml-44 ">
@@ -60,7 +59,7 @@
 									<h4 class="absolute -top-2 -right-5 text-gray-500 font-semibold text-sm">'22</h4>
 									<h4 class="text-gray-700 font-semibold text-xl">Percy Brown</h4>
 								</div>
-								<a href="" id="show-modal-profile"><i class='bx bxs-edit text-3xl origin-center text-accent hover:scale-125 ease-in-out duration-200'></i></a>
+								<a href="" onclick="openModal('modal-profile')"><i class='bx bxs-edit text-3xl origin-center text-accent hover:scale-125 ease-in-out duration-200'></i></a>
 							</div>
 							<h4 class="text-gray-400 text-sm">Gender: <span class="text-gray-700">Male</span></h4>
 							<h4 class="text-gray-400 text-sm">Department: <span class="text-gray-700">Computer Science & Information Systems</span></h4>
@@ -117,7 +116,8 @@
 					</div>
 				</div>
 				<div class="flex flex-col space-y-10 pb-20">
-					<button type="button" class="flex items-center justify-center text-accent border-accent bg-accent-light-hover rounded-lg border border-gray-200 text-sm font-medium px-5 py-3  focus:z-10 md:w-32"><i class='bx bx-card mr-1 text-lg'></i>Metric</button>
+	<!-- 				<button onclick="openModal('modal-metric')" type="button" class="flex items-center justify-center text-accent border-accent bg-accent-light-hover rounded-lg border border-gray-200 text-sm font-medium px-5 py-3  focus:z-10 md:w-32"><i class='bx bx-card mr-1 text-lg'></i>Metric</button> -->
+					<a href="./metric.html" target="_blank" class="flex items-center justify-center text-accent border-accent bg-accent-light-hover rounded-lg border border-gray-200 text-sm font-medium px-5 py-3  focus:z-10 md:w-32"><i class='bx bx-card mr-1 text-lg'></i>Metric</a>
 					<button class="bg-accent px-3 py-3 text-white rounded-md flex items-center justify-center md:w-72"><i class='bx bx-cog mr-1'></i>Manage Experiential Transcript</button>
 					<button class="px-3 py-3 text-gray-500 bg-white hover:bg-gray-200 rounded-lg bg-gray-100 border border-gray-200 flex items-center justify-center md:w-72"><i class='bx bx-cog mr-1'></i>Kindly Update Profile</button>
 					<a href="../documents/Experiential_Transcript_sample.pdf" target="_blank" class="hover:scale-125 ease-in-out duration-200 w-fit">Sample Transcript<i class='space-x-8 bx bx-link-external text-accent text-xl '></i></a>
@@ -128,103 +128,121 @@
 	</section>
 
 
+	<div id="modal-profile" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+	    <div class="relative top-10 w-10/12 md:max-w-6xl xl:max-w-5xl mx-auto shadow-xl rounded-md bg-white max-w-md">
 
-	<div id="modal-profile" class="z-50 fixed hidden overflow-y-auto inset-0 bg-black bg-opacity-30 h-screen w-full flex justify-center items-start md:items-center pt-10 xl:overflow-y-hidden">
-		<div class="relative w-10/12 md:max-w-6xl xl:max-w-5xl bg-white rounded shadow-lg">
-			
 			<div class="flex justify-between items-start py-4 px-10 rounded-t border-b">
-                <h3 class="text-xl font-normal text-gray-900">
-                    Update Content
-                </h3>
-                <button id="sign-modal-profile" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    <span class="sr-only">Close modal</span>
-                </button>
-            </div>
+	            <h3 class="text-xl font-normal text-gray-900">
+	                Update Content
+	            </h3>
+	            <button id="sign-modal-profile" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" onclick="closeModal('modal-profile')">
+	                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+	                <span class="sr-only">Close modal</span>
+	            </button>
+	        </div>
 
-		
-            <div class="py-4 px-10 ">
-            	<div class="flex flex-col md:flex-row md:justify-between">
-            		<h4 class="text-sm font-semibold text-gray-500 text-lg">Profile</h4>
-            		<div class="mt-4 px-4 space-y-10">
-            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
-	            			<div>
-					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">First name<span class="text-accent">*</span></label>
-					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
-					        </div>
-					        <div>
-					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Last name<span class="text-accent">*</span></label>
-					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
-					        </div>
-					        <div>
-					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Gender<span class="text-accent">*</span></label>
-					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
-					        </div>
-            			</div>
-            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
-					        <div>
-					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Phone<span class="text-accent">*</span></label>
-					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
-					        </div>
-					        <div>
-					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Student ID<span class="text-accent">*</span></label>
-					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
-					        </div>
-					        <div>
-					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Years<span class="text-accent">*</span></label>
-					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
-					        </div>
-            			</div>
-            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
-	            	
-            			</div>
-            		</div>	
-            	</div>
-            	<hr class="my-9">
-            	<div class="flex flex-col md:flex-row md:justify-between">
-            		<h4 class="text-sm font-semibold text-gray-500 text-lg">Education</h4>
-            		<div class="mt-4 px-4 space-y-10">
-            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
-	            			<div>
-					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Department<span class="text-accent">*</span></label>
-					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
-					        </div>
-					        <div>
-					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Major<span class="text-accent">*</span></label>
-					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
-					        </div>
-					        <div>
-					            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Degree<span class="text-accent">*</span></label>
-					            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
-					        </div>
-            			</div>
-            		</div>	
-            	</div>
-            </div>
-		    <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200">
-                <button type="button" class="text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Update Profile</button>
-                <button id="close-modal-profile" type="button" class="text-gray-500 bg-white hover:bg-gray-100 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Decline</button>
-            </div>
-		</div>
+	        <!-- Modal body -->
+	        <div class="h-auto overflow-y-scroll py-4 px-10 ">
+	        	    <div class="flex flex-col md:flex-row md:justify-between">
+	            		<h4 class="text-sm font-semibold text-gray-500 text-lg">Profile</h4>
+	            		<div class="mt-4 px-4 space-y-10">
+	            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
+		            			<div>
+						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">First name<span class="text-accent">*</span></label>
+						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
+						        </div>
+						        <div>
+						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Last name<span class="text-accent">*</span></label>
+						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
+						        </div>
+						        <div>
+						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Gender<span class="text-accent">*</span></label>
+						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
+						        </div>
+	            			</div>
+	            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
+						        <div>
+						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Phone<span class="text-accent">*</span></label>
+						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
+						        </div>
+						        <div>
+						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Student ID<span class="text-accent">*</span></label>
+						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
+						        </div>
+						        <div>
+						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Years<span class="text-accent">*</span></label>
+						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
+						        </div>
+	            			</div>
+	            		</div>	
+	            	</div>
+	            	<hr class="my-9">
+	            	<div class="flex flex-col md:flex-row md:justify-between">
+	            		<h4 class="text-sm font-semibold text-gray-500 text-lg">Education</h4>
+	            		<div class="mt-4 px-4 space-y-10">
+	            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
+		            			<div>
+						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Department<span class="text-accent">*</span></label>
+						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
+						        </div>
+						        <div>
+						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Major<span class="text-accent">*</span></label>
+						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
+						        </div>
+						        <div>
+						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Degree<span class="text-accent">*</span></label>
+						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
+						        </div>
+	            			</div>
+	            		</div>	
+	            	</div>
+	            	   	<hr class="my-9">
+	            	<div class="flex flex-col md:flex-row md:justify-between">
+	            		<h4 class="text-sm font-semibold text-gray-500 text-lg">Education</h4>
+	            		<div class="mt-4 px-4 space-y-10">
+	            			<div class="flex flex-col space-y-7 md:flex-row md:space-y-0 md:space-x-16">
+		            			<div>
+						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Department<span class="text-accent">*</span></label>
+						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
+						        </div>
+						        <div>
+						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Major<span class="text-accent">*</span></label>
+						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
+						        </div>
+						        <div>
+						            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-500">Degree<span class="text-accent">*</span></label>
+						            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-2.5" required>
+						        </div>
+	            			</div>
+	            		</div>	
+	            	</div>
+
+	        </div>
+
+	        <!-- Modal footer -->
+	        <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200">
+	            <button type="button" class="text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Update Profile</button>
+	            <button onclick="closeModal('modal-profile')" type="button" class="text-gray-500 bg-white hover:bg-gray-100 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Cancel</button>
+	        </div>
+	    </div>
 	</div>
 
+	<div id="modal-picture" class="fixed hidden z-50 inset-0 bg-black bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+	    <div class="relative top-40 w-10/12 md:max-w-xl mx-auto shadow-xl rounded-md bg-white max-w-md">
 
-
-	<div id="modal-picture" class="z-50 hidden fixed overflow-y-auto inset-0 bg-black bg-opacity-30 h-screen w-full flex justify-center items-center md:items-center py-10 xl:overflow-y-hidden">
-		<div class="relative w-10/12 md:max-w-xl bg-white rounded shadow-lg">
-			
 			<div class="flex justify-between items-start py-4 px-10 rounded-t border-b">
-				<h3 class="text-xl font-normal text-gray-900">
-					Edit Profile Picture
-				</h3>
-				<button id="sign-modal-picture" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
-					<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-					<span class="sr-only">Close modal</span>
-				</button>
-			</div>
-	
-			<div class="py-14 px-10">
-				<div class="flex flex-col space-y-16 md:flex-row md:space-y-0 md:justify-between">
+	            <h3 class="text-xl font-normal text-gray-900">
+	                Edit Profile Picture
+	            </h3>
+	            <button id="modal-picture" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" onclick="closeModal('modal-picture')">
+	                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+	                <span class="sr-only">Close modal</span>
+	            </button>
+	        </div>
+
+	        <!-- Modal body -->
+	        <div class="h-auto overflow-y-scroll py-14 px-10 ">
+	        	<div class="flex flex-col space-y-16 md:flex-row md:space-y-0 md:justify-between">
 					<div class="w-32 h-32 space-y-2">
 						<img class="rounded-full border-2 border-gray-100" src="./images/cover/profile-bg.png">
 						<h4 class="text-xs text-gray-400 font-semibold">Current Profile Picture</h4>
@@ -240,86 +258,113 @@
 						</div>
 					</div>
 				</div>
-			</div>
+	        </div>
 
-			<div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200">
-				<button type="button" class="text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Update Picture</button>
-				<button id="close-modal-picture" type="button" class="text-gray-500 bg-white hover:bg-gray-100 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Decline</button>
-			</div>
-		</div>
+	        <!-- Modal footer -->
+	        <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200">
+	            <button type="button" class="text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Update Profile</button>
+	            <button onclick="closeModal('modal-picture')" type="button" class="text-gray-500 bg-white hover:bg-gray-100 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Cancel</button>
+	        </div>
+	    </div>
 	</div>
+<!-- 
+<div id="modal-metric" class="fixed z-50 hidden inset-0 bg-black bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+    <div class="relative top-10 w-10/12 md:max-w-6xl xl:max-w-6xl mx-auto shadow-xl rounded-md bg-white max-w-md">
+
+		<div class="flex justify-between items-start py-4 px-10 rounded-t border-b">
+            <h3 class="text-xl font-normal text-gray-900">
+                Ashesi Experiential Transcript - Pillars, Elements & Metrics
+            </h3>
+            <button id="modal-picture" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" onclick="closeModal('modal-metric')">
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+        </div>
+
+        <div class="h-auto overflow-y-hidden py-4 px-10 ">
+     		<div class="flex flex-col space-y-6 md:px-8">
+				<h4 class="text-gray-800 text-2xl mt-4">Pillar 1: Scholarship</h4>
+				<div class="space-y-6 leading-loose font-light text-lg text-gray-500 ">
+					<p>Scholarship is defined as demonstration of high-quality knowledge and/or academic achievement in a particular field or various fields, obtained from detailed study, critical thinking, rigorous interaction with different materials and perspectives and analytical reasoning, along with a demonstrated passion in and beyond the classroom. Scholarship has three elements: Academic Achievements, Research & Discovery and Professionalism.</p>
+				</div>
+				<div class="px-10">
+					<div class="space-y-2">
+						<li class="leading-loose text-lg text-gray-500 font-medium">1a) Academic Achievements: excellent performance in coursework or self-directed work in an academic discipline.</li>
+						<div class="space-y-2 leading-loose font-light text-lg text-gray-500 ">
+							<h4 class="text-accent underline underline-offset-8 font-medium">Metrics</h4>
+							<div class="px-10 space-y-2">
+								<p class="text-base"><span class="text-accent mr-1">*</span>Being on the Dean’s List</p>
+								<p class="text-base"><span class="text-accent mr-1">*</span>Winning an academic competition</p>
+								<p class="text-base"><span class="text-accent mr-1">*</span>Demonstrating knowledge of subject area in context outside of the classroom</p>
+								<p class="text-base"><span class="text-accent mr-1">*</span>Other</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="px-10">
+					<div class="space-y-2">
+						<li class="leading-loose text-lg text-gray-500 font-medium">1b) Research & Discovery: detailed academic/self-directed investigation into a topic sparked by knowledge gap and curiosity, interest and the desire to make a difference. </li>
+						<div class="space-y-2 leading-loose font-light text-lg text-gray-500 ">
+							<h4 class="text-accent underline underline-offset-8 font-medium">Metrics</h4>
+							<div class="px-10 space-y-3">
+								<p class="text-base"><span class="text-accent mr-1">*</span>Undergraduate research/experimentation/project that synthesizes information across a variety of disciplines or advances a new thought in a chosen field</p>
+								<p class="text-base"><span class="text-accent mr-1">*</span>Self-initiated research/experimentation/project in unexplored/chosen fields that contributes or has the potential to contribute to the advancement of the field and/ or synthesizes information across a variety of disciplines</p>
+								<p class="text-base"><span class="text-accent mr-1">*</span>Presenting at a conference or sharing knowledge or skill publicly</p>
+								<p class="text-base"><span class="text-accent mr-1">*</span>Other</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="px-10">
+					<div class="space-y-2">
+						<li class="leading-loose text-lg text-gray-500 font-medium">1b) Research & Discovery: detailed academic/self-directed investigation into a topic sparked by knowledge gap and curiosity, interest and the desire to make a difference. </li>
+						<div class="space-y-2 leading-loose font-light text-lg text-gray-500 ">
+							<h4 class="text-accent underline underline-offset-8 font-medium">Metrics</h4>
+							<div class="px-10 space-y-3">
+								<p class="text-base"><span class="text-accent mr-1">*</span>Undergraduate research/experimentation/project that synthesizes information across a variety of disciplines or advances a new thought in a chosen field</p>
+								<p class="text-base"><span class="text-accent mr-1">*</span>Self-initiated research/experimentation/project in unexplored/chosen fields that contributes or has the potential to contribute to the advancement of the field and/ or synthesizes information across a variety of disciplines</p>
+								<p class="text-base"><span class="text-accent mr-1">*</span>Presenting at a conference or sharing knowledge or skill publicly</p>
+								<p class="text-base"><span class="text-accent mr-1">*</span>Other</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+
+		<div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200">
+            <button id="close-modal-metric" type="button" class="text-white bg-red-600 hover:bg-red-700 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Cancel</button>
+        </div>
+    </div>
+</div> -->
+
 
 
 	<!-- script -->
 	<script type="text/javascript" src="./js/index.js"></script>
-	<script type="text/javascript" src="./js/jquery.js"></script>
-	<script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript">
-		let modalProfile = document.getElementById('modal-profile');
-		let modalPicture = document.getElementById('modal-picture');
-		let showModalProfile = document.getElementById('show-modal-profile')
-		let closeSignProfile = document.getElementById('sign-modal-profile')
-		let closeModalProfile = document.getElementById('close-modal-profile')
-		let overlayProfile = document.getElementById('overlay-profile')
-		let showModalPicture = document.getElementById('show-modal-picture')
-		let closeSignPicture = document.getElementById('sign-modal-picture')
-		let closeModalPicture = document.getElementById('close-modal-picture')
-		let overlayPicture = document.getElementById('overlay-picture')
-
-		showModalProfile.onclick = function()
-		{
-			event.preventDefault();
-			modalProfile.classList.remove('hidden')
-		}
-
-		closeSignProfile.onclick = function()
-		{
-			event.preventDefault();
-			modalProfile.classList.add('hidden')
-		}	
-
-		closeModalProfile.onclick = function()
-		{
-			event.preventDefault();
-			modalProfile.classList.add('hidden')
-		}
-
-		window.onclick = function(event)
-		{
- 
-			if(event.target == overlayProfile)
-			{
-				modalProfile.classList.add('hidden')
+			window.openModal = function(modalId) {
+			  document.getElementById(modalId).style.display = 'block'
+			  document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+			  event.preventDefault();
 			}
-		}
 
-		
-		showModalPicture.onclick = function()
-		{
-			event.preventDefault();
-			modalPicture.classList.remove('hidden')
-		}
-
-		closeSignPicture.onclick = function()
-		{
-			event.preventDefault();
-			modalPicture.classList.add('hidden')
-		}	
-
-		closeModalPicture.onclick = function()
-		{
-			event.preventDefault();
-			modalPicture.classList.add('hidden')
-		}
-
-		window.onclick = function(event)
-		{
- 
-			if(event.target == overlayPicture)
-			{
-				modalPicture.classList.add('hidden')
+			window.closeModal = function(modalId) {
+			  document.getElementById(modalId).style.display = 'none'
+			  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
 			}
-		}
+
+			// Close all modals when press ESC
+			document.onkeydown = function(event) {
+			  event = event || window.event;
+			  if (event.keyCode === 27) {
+			    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+			    let modals = document.getElementsByClassName('modal');
+			    Array.prototype.slice.call(modals).forEach(i => {
+			      i.style.display = 'none'
+			    })
+			  }
+			};
 	</script>
 </body>
 </html>
