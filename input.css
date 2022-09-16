@@ -21,10 +21,17 @@
   background: #923D41;
 }
 
-/*Background color:  hover*/
+/*Background color:  hover-dark shade*/
 .bg-accent:hover{
   background: #803639;
 }
+
+/*Background color:  hover-dark shade*/
+.bg-accent-light-hover:hover{
+  background: #FFECED;
+}
+
+
 
 /*Border Color*/
 .border-accent{
