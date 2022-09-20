@@ -30,10 +30,13 @@
   background: #FFECED;
 }
 
-
-
 /*Border Color*/
 .border-accent{
+  border: 1px solid #923D41;
+}
+
+/*Focus Border Color*/
+.focus-border:focus{
   border: 1px solid #923D41;
 }
 
